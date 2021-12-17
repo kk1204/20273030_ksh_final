@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 makeRequest();
             }
         });
+
         Button dateButton = findViewById(R.id.dateButton);
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
                 dateProcess(v);
             }
         });
+
+        Button imageButton = (Button) findViewById(R.id.btn1);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ReviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
         if(requestQueue == null)
         {
             requestQueue = Volley.newRequestQueue(getApplicationContext());

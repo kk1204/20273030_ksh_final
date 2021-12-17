@@ -25,6 +25,12 @@
         android:layout_height="wrap_content"
         android:text="요청하기"/>
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="한줄 감상평"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
